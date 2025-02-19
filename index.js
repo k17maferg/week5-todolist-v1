@@ -1,5 +1,6 @@
 //jshint esversion:6
 
+//create an express object from the express package
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -61,6 +62,7 @@ app.post("/", function (req, res) {
 app.get("/work", function (req, res) {
   let day = date.getDate();
 
+  //display title and list of wrok items
   res.render("list", {
     listTitle: "Work Items To-Do List",
     newListItems: workItems,
